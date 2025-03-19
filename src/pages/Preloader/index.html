@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="preload.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class='loader'>
+        <div class='img'>
+            <img src="../../assets/bg3.jpg" alt='imgOne'/>
+        </div>
+        <div class='img'>
+            <img src="../../assets/bg9.jpg" alt='imgOne'/>
+        </div>
+        <div class='img'>
+            <img src="../../assets/bg3.jpg" alt='imgOne'/>
+        </div>
+        <div class='img'>
+            <img src="../../assets/bg9.jpg" alt='imgOne'/>
+        </div>
+        <div class='img'>
+            <img src="../../assets/bg3.jpg" alt='imgOne'/>
+        </div>
+        <div class='img'>
+            <img src="../../assets/bg9.jpg" alt='imgOne'/>
+        </div>
+        <div class='img'>
+            <img src="../../assets/bg3.jpg" alt='imgOne'/>
+        </div>
+    </div>
+    <div class='overlay'>
+        <div class='col'>
+            <h2><div>An portugese</div></h2>
+            <h2><div>An portugese</div></h2>
+            <h2><div>An portugese</div></h2>
+        </div>
+        <div class='col'>
+            <h2>
+                <div><span>Click</span> anywhere to continue</div>
+            </h2>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+    <script>
+        gsap.from("h2 div", 1.5, {
+            yPercent:100,
+            ease: "power4.inOut",
+            stagger:{
+                amount: 0.5,
+            },
+        });
+
+        gsap.to("h2", 1.5, {
+            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+            ease: "power4.inOut",
+            stagger:{
+                amount: 0.5,
+            },
+        });
+
+        document.addEventListener("DOMContentLoaded",
+        function(){
+            let overlay = document.querySelector(".overlay");
+            overlay.addEventListener("click", function () {
+                gsap.to("h2 div", 1.5, {
+                    yPercent: -100,
+                    ease: "power4.inOut",
+                    stagger:{
+                        amount: 0.5,
+                     },
+                });
+
+                gsap.to("h2", 1.5, {
+                    clipPath: "polygon(0 85%, 100% 85%, 100% 100%, 0 100%)",
+                    ease: "power4.inOut",
+                    stagger:{
+                         amount: 0.5,
+                    },
+                },
+                0
+                );
+
+                gsap.to(".overlay", 2, {
+                    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+                    ease: "power4.inOut",
+                });
+
+                gsap.to(".img", 2, {
+                    clipPath: "polygon(0 100%, 100% 100%, 100% 0%, 0% 0%)",
+                    ease: "power4.inOut",
+                    stagger:{
+                        amount: 1.5,
+                    },
+                });
+
+                gsap.to(".loader", 2, {
+                    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+                    ease: "power4.inOut",
+                    delay: 2,
+                });
+            })
+        } 
+        )
+    </script>
+</body>
+</html>

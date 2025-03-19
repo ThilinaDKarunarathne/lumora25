@@ -1,0 +1,160 @@
+@import url('https://fonts.cdnfonts.com/css/cocobiker');
+@import url('https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&display=swap');
+body {
+    background-image: url('../../assets/bg1.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2vh;
+}
+
+body:after {
+    content: "";
+    position: fixed;
+    background: #1e2328;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.title {
+    margin-top: 50px;
+    font-size: 35px;
+    font-family: 'CocoBikeR', sans-serif;
+    color: rgb(215, 184, 5);
+    text-align: center;
+}
+
+.subTitle {
+    font-family: "Marhey", sans-serif;
+    letter-spacing: 0.1875em;
+    margin-top: 40px;
+    font-size: 25px;
+    color: rgb(243, 119, 4);
+    text-align: center;
+}
+
+.itemContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#item1 {
+    background-image: url('../../assets/item2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 10px;
+}
+
+#item2 {
+    background-image: url('../../assets/item1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 10px;
+}
+
+#item3 {
+    background-image: url('../../assets/item3.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 10px;
+}
+
+.item {
+    width: 200px;
+    height: 200px;
+    animation-name: rotate;
+    animation-duration: 6s;
+    animation-play-state: running;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+    10% {
+        transform: rotateY(36deg)
+    }
+    20% {
+        transform: rotateY(72deg)
+    }
+    30% {
+        transform: rotateY(108deg)
+    }
+    40% {
+        transform: rotateY(144deg)
+    }
+    50% {
+        transform: rotateY(180deg)
+    }
+    60% {
+        transform: rotateY(216deg)
+    }
+    70% {
+        transform: rotateY(252deg)
+    }
+    80% {
+        transform: rotateY(288deg)
+    }
+    90% {
+        transform: rotateY(324deg)
+    }
+    100% {
+        transform: rotateY(360deg)
+    }
+}
+
+@media (max-width: 1000px) {
+    .item {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 30px;
+    }
+    .subTitle {
+        font-size: 20px;
+    }
+    .item {
+        width: 125px;
+        height: 125px;
+    }
+}
+
+@media (max-width: 470px) {
+    .title {
+        font-size: 20px;
+    }
+    .subTitle {
+        font-size: 20px;
+        letter-spacing: 0;
+    }
+    .item {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 470px) {
+    .title {
+        font-size: 15px;
+    }
+}

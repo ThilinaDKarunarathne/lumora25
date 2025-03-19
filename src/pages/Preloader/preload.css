@@ -1,0 +1,208 @@
+@import url('https://fonts.cdnfonts.com/css/cocobiker');
+@import url('https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    overflow: hidden;
+    font-family: "Greycliff CF";
+  }
+
+  .preloadcontainer{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  nav {
+    position: fixed;
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  nav p {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  .container h1 {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 60px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    
+  }
+  
+  .loader {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+  }
+  
+  .loader .img {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  }
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+    
+  .overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../assets/home.jpg');
+    background-size: cover;
+    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+
+    display: grid;
+    grid-template-rows: 1fr auto;
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .overlay h2 {
+    margin: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  .rowOne .title {
+    color: #fda300;
+    font-family: 'Uncial Antiqua', cursive;
+    font-size: 100px;
+    letter-spacing: 0.1875em;
+    font-size: 6rem;
+    font-weight: 600;
+    margin: unset;
+    text-align: center;
+  }
+
+  .rowOne .titleLabel {
+      font-family: 'Audiowide', cursive;
+      font-size: 70px;
+      letter-spacing: 0.1875em;
+      letter-spacing: 0;
+      margin-left: -0.3em ;
+      font-weight: 400;
+  }
+
+  .rowOne .coltopic{ 
+      font-family: "Marhey", sans-serif;
+      text-transform:capitalize;
+      font-size: 2rem;
+      font-weight: 400;
+      color: #ffffff;
+  }
+
+  .rowTwo {
+    position: fixed;
+    color: #ffffff;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .rowOne .colt {
+    font-family: "Marhey", sans-serif;
+      text-transform:capitalize;
+      font-size: 2rem;
+      font-weight: 400;
+      color: #ffffff;
+
+  }
+  .rowTwo:nth-child(2) h2 {
+    font-size: 1rem;    
+    text-align: center;
+    color: gray;
+  }
+  
+  .rowTwo:nth-child(2) h2 span {
+    font-size: 1.2rem;   
+    color: #fff;
+    margin-right: 4px;
+  }
+  
+  @media screen and (max-width: 992px) {
+    .rowOne .title {
+      font-size: rem;
+    }
+
+    .rowOne .coltopic{ 
+      font-size: 2rem;
+    }
+
+    .rowTwo:nth-child(2) h2 {
+      font-size: 1rem;    
+    }
+    
+    .rowTwo:nth-child(2) h2 span {
+      font-size: 1.2rem;   
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .rowOne .title {
+      font-size: 2.5rem;
+    }
+
+    .rowOne .coltopic{ 
+      font-size: 1.5rem;
+    }
+
+    .rowTwo:nth-child(2) h2 {
+      font-size: 0.65rem;    
+    }
+    
+    .rowTwo:nth-child(2) h2 span {
+      font-size: 0.7rem;   
+    }
+  }
+  
+  @media screen and (max-width: 350px) {
+    .rowOne .title {
+      font-size: 1.8rem;
+    }
+
+    .rowOne .coltopic{ 
+      font-size: 0.8rem;
+    }
+
+    .rowTwo:nth-child(2) h2 {
+      font-size: 0.5rem;    
+    }
+    
+    .rowTwo:nth-child(2) h2 span {
+      font-size: 0.55rem;   
+    }
+
+  }

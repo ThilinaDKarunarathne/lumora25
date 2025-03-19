@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+body {
+    background-image: url('../../assets/countdown.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+ 
+/* .title {
+    background-image: ('../../assets/countdown.jpg');
+    color: #fda300;
+    font-family: 'Uncial Antiqua', cursive;
+    padding-top: 150px;
+    font-size: 100px;
+    font-weight: 700;
+    letter-spacing: 0.1875em;
+    margin: unset;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}  */
+
+.logoImage {
+    padding-bottom: 50px;
+    max-width: 100%;
+    max-height:600px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.titleLabel {
+    font-family: 'Audiowide', cursive;
+    font-size: 80px;
+    font-weight: 700;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding-left: 1000px;
+    align-items: center;
+}
+
+.counter {
+    background: rgba(147, 201, 123, 0.404);
+    align-content: center;
+    color: #c2b726;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "JetBrains Mono", mono;
+    font-weight: 100;
+    line-height: 1;
+    padding: 10px;
+    text-align: center;
+    min-width: 120px;
+    max-width: 120px;
+}
+
+.displayValue {
+    font-size: 70px;
+    align-items: center;
+    white-space: nowrap;
+}
+
+@media (max-width: 885px) {
+    .wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 565px) {
+    .title {
+        font-size: 50px;
+    }
+    .titleLabel {
+        font-size: 40px;
+    }
+    .counterLabel {
+        font-size: 10px;
+    }
+    .displayValue {
+        font-size: 50px;
+    }
+    .counter {
+        min-width: 100px;
+    }
+}
+
+@media (max-width: 358px) {
+    .title {
+        font-size: 30px;
+    }
+    .titleLabel {
+        font-size: 25px;
+    }
+    .counterLabel {
+        font-size: 5px;
+    }
+    .displayValue {
+        font-size: 30px;
+    }
+    .counter {
+        min-width: 80px;
+    }
+}

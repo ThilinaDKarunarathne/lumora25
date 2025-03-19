@@ -1,0 +1,11 @@
+.sentContent {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    text-align: center;
+  }
+
+.sentContent .inputField{
+    text-align: center;
+}

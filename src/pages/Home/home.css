@@ -1,0 +1,262 @@
+@import url('https://fonts.cdnfonts.com/css/cocobiker');
+@import url('https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&display=swap');
+body {
+    background-image: url('../../assets/home.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2vh;
+}
+
+body:after {
+    content: "";
+    position: fixed;
+    background: #1e2328;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+section {
+    text-transform: capitalize;
+    border: none;
+    height: 96vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0);  /* Transparent white background */
+    backdrop-filter: blur(10px);  /* Apply blur effect to the background */
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: none;
+    width: 700px;
+    margin: auto;
+    padding: 0vh 4rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0vh 5vw 2vh 5vw;
+    border-bottom: 3px solid black;
+}
+
+.title img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.caption {
+    font-size: 20px;
+    font-weight: 600;
+    color: maroon;
+    font-family: "Marhey", sans-serif;
+    line-height: 1;
+}
+
+.imageContent {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.slideshow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hintTitle {
+    font-size: 20px;
+    margin-top: 10px;
+    font-family: "Marhey", sans-serif;
+    font-weight: 600;
+    color: #01015e;
+}
+
+.hintImage {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.hintSubTitle {
+    font-size: 15px;
+    margin-top: 10px;
+    font-family: "Marhey", sans-serif;
+    font-weight: 600;
+    color: maroon;
+}
+
+.hintDescription-container{
+    margin-top: 10px;
+    height: 10vh;
+
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+}
+
+.hintDescription {
+    font-size: 15px;
+    font-family: "Marhey", sans-serif;
+    line-height: 1.3;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+}
+
+.buttons-container {
+    margin-top: 10px;
+    display: flex;
+}
+
+.buttons-container button {
+    margin: 0 3vw;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s; 
+}
+
+.buttons-container button:active {
+    transform: scale(0.95); 
+}
+  
+.buttons-container button img {
+    width: 60px;
+    height: 60px; 
+  }
+
+.help {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-container .helpButton {
+    font-family: "Marhey", sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight:bolder;
+    padding: 5px 10px;
+    border: 3px solid brown;
+    background-color: rgba(240, 248, 255, 0.2);    
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 550px) {
+    .container {
+        padding: 0 2rem;
+    }
+    .header {
+        padding: 3vh 20px;
+    }
+
+    .title img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+    .caption {
+        font-size:  20px;  
+    }
+
+    .hintTitle{
+        font-size:  18px;  
+    }
+
+    .hintSubTitle{
+        font-size:  16px;      
+    }   
+
+    .hintDescription{
+        font-size:  13px; 
+    }
+    .buttons-container button {
+        margin: 0 3vw;
+    }
+    .buttons-container button img {
+        width: 45px;
+        height: 45px; 
+    }
+    .help {
+        margin-top: 20px;
+    }
+    .helpButton {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .container {
+        padding: 0 2rem;
+    }
+    .header {
+        padding: 3vh 0px;
+    }
+
+    .title img {
+        width: 100%;
+        max-width: 220px;
+        height: auto;
+    }
+    
+    .caption {
+        font-size:  16px;  
+    }
+
+    .hintTitle{
+        font-size:  15px;  
+    }
+
+    .hintSubTitle{
+        font-size:  15px;     
+        line-height: 1.2;
+    }   
+
+    .hintDescription-container{
+        margin-top: 1vh;
+        height: 15vh;
+    }
+
+    .hintDescription{
+        font-size:  13px; 
+    }
+
+    .buttons-container {
+        margin-top: 20px;
+      }
+
+    .buttons-container button {
+        margin: 0 3vw;
+    }
+    .buttons-container button img {
+        width: 45px;
+        height: 45px; 
+    }
+    .help {
+        margin-top: 20px;
+    }
+}
